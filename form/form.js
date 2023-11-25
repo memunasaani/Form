@@ -1,3 +1,5 @@
+// script.js
+
 function validateForm() {
     var username = document.forms["Formfill"]["Username"].value;
     var email = document.forms["Formfill"]["Email"].value;
@@ -7,15 +9,24 @@ function validateForm() {
     var gender = document.querySelector('input[name="gender"]:checked');
     var course = document.forms["Formfill"]["course"].value;
 
-    if (username == "" || email == "" || password == "" || cPassword == "" || age == "" || !gender || course == "") {
-        alert("All fields must be filled out");
+    var isValid = true;
+
+    // Validate username
+    var usernameError = document.getElementById('username-error');
+    if (username == "") {
+        usernameError.innerHTML = "Username is required";
+        document.getElementById('username').classList.add('invalid-field');
+        isValid = false;
+    } else {
+        usernameError.innerHTML = "";
+        document.getElementById('username').classList.remove('invalid-field');
+    }
+
+   
+
+    if (!isValid) {
         return false;
     }
 
-    if (password !== cPassword) {
-        alert("Password and Confirm Password must match");
-        return false;
-    }
-
-    return true;
+    return true; 
 }
