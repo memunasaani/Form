@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="stlyes.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="" name="Formfill">
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <label for="Username">Username<br>
+                    <input type="text" name="Username" placeholder="Username" required>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="Email">Email Address<br>
+                    <input type="email" name="Email" placeholder="abc@gmail.com" required>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="Password"> Password <br>
+                    <input type="password" name="Password" placeholder="*******" required>
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <label for="cPassword">Confirm Password <br>
+                    <input type="password" name="cPassword" placeholder="*******" required>
+                    </label>
+                </div>
+
+                <div class="input-box"> 
+                    <label for="age"> Age <br>
+                    <input type="number" name="age" placeholder="20" required>
+                    </label>
+                </div>
+                
+                <div class="input-box">
+                    <label for="gender"> Gender <br>
+                        <input type="radio" name="gender" required> Male
+                        <input type="radio" name="gender" required> Female
+                        <input type="radio" name="gender" required> Neutral
+                    </label>
+                </div>
+
+                <div class="input-box"><label>Course<br>
+                    <select name="course" id="">
+                        <option value=""></option>
+                        <option value="">Front-End</option>
+                        <option value=""> Back-End</option>
+                        <option value="">Full-Stack</option>
+                    </select>
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox" required><a href="#">Terms and Conditions</a>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="register">
+                    <p>Already Registered <a href="signin.html">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="form.js"></script>
+</html>
